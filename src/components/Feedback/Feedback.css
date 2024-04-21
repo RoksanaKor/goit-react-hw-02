@@ -1,0 +1,40 @@
+#root,
+button,
+p, 
+h2 {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:rgb(51, 38, 23);
+ background-color: rgba(227, 227, 227, 0.163);
+}
+
+
+
+
+.buttonsDiv {
+ display: flex;
+ gap: 10%;
+}
+
+.buttonsDiv button {
+ padding: 20px 30px;
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: rgba(36, 34, 34, 0.711);
+ background-color: bisque;
+ border-radius: 1rem;
+ border: none;
+ box-shadow: 0 0 20px #2b2b2b9f;
+}
+
+.buttonsDiv button:hover,
+.buttonsDiv button:active,
+.buttonsDiv button:focus {
+ box-shadow: 0 0 20px #489b0cc6;
+ background-color: rgba(86, 168, 58, 0.289);
+}
+
+.statistics p {
+ margin: 0;
+ padding-block: 0.5rem;
+}
+

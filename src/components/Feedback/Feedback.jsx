@@ -1,5 +1,8 @@
+import { SectionTitle } from "components/SectionTitle";
 import "./Feedback.css";
 import React, { useState } from "react";
+import { Feedbackoptions } from "components/FeedbackOptions";
+import { Statistics } from "components/Statistics";
 
 export const Feedback = () => {
  const [stateValue, setStateValue] = useState({good: 0, neutral: 0, bad: 0});
@@ -39,20 +42,12 @@ export const Feedback = () => {
 
  return (
   <div className='feedbackForm'>
-   <h2>Please leave feedback</h2>
-   <div className="buttonsDiv">
-    <button type="button" onClick={onClick} key='goodBtn' name='good'>Good</button>
-    <button type="button" onClick={onClick} key='neutralBtn' name='neutral'>Neutral</button>
-    <button type="button" onClick={onClick} key='badBtn' name='bad'>Bad</button>
-   </div>
-   <h2>Statistics</h2>
-   <div className="statistics">
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total: {sum}</p>
-    <p>Positive feedback: {positiveFeedbackPercentage()}%</p>
-   </div>
+   <SectionTitle sectionTitle="Please leave feedback">
+    <Feedbackoptions stateValue={stateValue} setStateValue={setStateValue}/>
+   </SectionTitle>
+   <SectionTitle sectionTitle='Statistics'>
+    <Statistics good={good} neutral={neutral} bad={bad} sum={sum}positiveFeedbackPercentage={positiveFeedbackPercentage}/>
+   </SectionTitle>
   </div>
  );
 }

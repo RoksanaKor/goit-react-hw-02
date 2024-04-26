@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export const Feedbackoptions = ({stateValue, setStateValue}) => {
  const {good, neutral, bad} = stateValue;
@@ -34,3 +35,8 @@ export const Feedbackoptions = ({stateValue, setStateValue}) => {
   </div>
  );
 }
+
+Feedbackoptions.propTypes = {
+  stateValue: PropTypes.object,
+  setStateValue: PropTypes.func
+};

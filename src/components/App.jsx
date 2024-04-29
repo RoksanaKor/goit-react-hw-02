@@ -18,7 +18,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      {/* <Feedback stateValue={stateValue} setStateValue={setStateValue}/> */}
+      <Feedback stateValue={stateValue} setStateValue={setStateValue}/>
       <Phonebook/>
     </div>
   );

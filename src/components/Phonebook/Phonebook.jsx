@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Phonebook.css";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 
 export const Phonebook = () => {
  const [phonebook, setPhonebook] = useState({contacts: [], name: ''})

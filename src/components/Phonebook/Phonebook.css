@@ -1,0 +1,9 @@
+#root,
+button,
+p, 
+h2 {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:rgb(51, 38, 23);
+ background-color: rgba(227, 227, 227, 0.163);
+}
+

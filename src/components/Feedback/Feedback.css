@@ -38,3 +38,7 @@ h2 {
  padding-block: 0.5rem;
 }
 
+ul {
+  list-style: none;
+}
+

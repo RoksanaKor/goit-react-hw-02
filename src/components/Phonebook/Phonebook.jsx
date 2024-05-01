@@ -5,8 +5,8 @@ import { nanoid } from "nanoid";
 
 export const Phonebook = () => {
   const [phonebook, setPhonebook] = useState([]);
-
   const inputRef = useRef('');
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setPhonebook([...phonebook, {name: inputRef.current.value , id: nanoid()}]);
@@ -14,11 +14,11 @@ export const Phonebook = () => {
   }
 
   return (
-    <>
+    <div className="phonebookDiv">
       <h2>Phonebook</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name
+          Name<br></br>
           <input
             type="text"
             name="name"
@@ -32,8 +32,8 @@ export const Phonebook = () => {
       </form>
       <h2>Contacts</h2>
       <ul>
-        {phonebook.map((el) => <li key={el.id}>{el.name}</li>)}
+        {phonebook.map((el) => <li key={el.id}>-{el.name}</li>)}
       </ul>
-    </>
+    </div>
   )
 }
